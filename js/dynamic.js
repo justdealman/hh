@@ -146,7 +146,7 @@ $(document).ready(function() {
 			});
         }
     });
-	$(window).bind('scroll', function() {
+	/*$(window).bind('scroll', function() {
 		if ( $(document).scrollTop() > 460 ) {
 			$('.total').css({
 				'display': 'block',
@@ -160,26 +160,35 @@ $(document).ready(function() {
 				'top': '480px'
 			});
 		}
-	});
+	});*/
 	$('input[type="radio"][data-price]').bind('click', function() {
 		var p = $(this).attr('data-price');
 		var d = $(this).parents('.form').find('input[type="radio"][data-duration]:checked').attr('data-duration');
-		$('.total').css({
-			'display': 'block'
-		});
-		$('.total').find('p .price').empty().text(p);
-		$('.total').find('p .duration').empty().text(d);
-		$('.total').find('h5 span').empty().text(eval(d*p));
+		var t = eval(d*p);
+		if ( d*p == 0 ) {
+			$('.total').find('h4 strong').empty().text('бесплатно');
+		}
+		else {
+			$('.total').find('h4 strong').empty().text(eval(d*p)+' руб.');
+		}
 	});
 	$('input[type="radio"][data-duration]').bind('click', function() {
 		var d = $(this).attr('data-duration');
 		var p = $(this).parents('.form').find('input[type="radio"][data-price]:checked').attr('data-price');
-		$('.total').css({
-			'display': 'block'
-		});
-		$('.total').find('p .price').empty().text(p);
-		$('.total').find('p .duration').empty().text(d);
-		$('.total').find('h5 span').empty().text(eval(d*p));
+		var t = eval(d*p);
+		if ( d*p == 0 ) {
+			$('.total').find('h4 strong').empty().text('бесплатно');
+		}
+		else {
+			$('.total').find('h4 strong').empty().text(eval(d*p)+' руб.');
+		}
+	});
+	$('.tariff li button').bind('click', function() {
+		var form = $(this).parents('.tariff').next('.form');
+		form.find('input[type="radio"][name="type"]').prop('false', true).parent().removeClass('checked');
+		form.find('input[type="radio"][name="type"][value="'+$(this).attr('data-type')+'"]').prop('checked', true).parent().addClass('checked');
+		form.find('input[type="radio"][name="duration"]').prop('false', true).parent().removeClass('checked');
+		form.find('input[type="radio"][name="duration"][value="'+$(this).attr('data-duration')+'"]').prop('checked', true).parent().addClass('checked');
 	});
 	/*$('.portfolio > div h4 .total').text($('.portfolio > div .container > div').size());
 	$('.portfolio > div').slides({
