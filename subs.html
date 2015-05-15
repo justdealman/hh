@@ -1,0 +1,160 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>Hello, honey</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=1000, user-scalable=yes">
+	<!--<link href="./favicon.ico" rel="shortcut icon" type="image/x-icon">-->
+	<link href="./css/style.css" rel="stylesheet" type="text/css" title="compact">
+	<link href="./css/uniform.css" rel="stylesheet" type="text/css" title="compact">
+</head>
+<body>
+	<div class="wrapper">
+		<div class="header">
+			<a href="#"><img src="./img/logo.png" width="120" height="64" class="logo" alt=""></a>
+			<ul class="menu">
+				<li><a href="#">Тест-драйв</a></li>
+				<li><a href="#">Варианты подписки</a></li>
+				<li class="active"><a href="#">Подарить подписку</a></li>
+			</ul>
+			<ul class="social">
+				<li><a href="#" class="instagram"></a></li>
+				<li><a href="#" class="vkontakte"></a></li>
+				<li><a href="#" class="facebook"></a></li>
+			</ul>
+		</div>
+		<!--<div class="header type2">
+			<a href="#"><img src="./img/logo2.png" width="180" height="30" class="logo" alt=""></a>
+			<ul class="menu">
+				<li><a href="#">Что за ящик?</a></li>
+				<li><a href="#">Тематический ящики</a></li>
+				<li class="active"><a href="#">Подарить ящик</a></li>
+				<li><a href="#">Прошлые ящики</a></li>
+				<li><a href="#">Вопрос-ответ</a></li>
+			</ul>
+		</div>-->
+		<div class="form">
+			<h2><span>Подарить подписку</span></h2>
+			<p>Нашу подписку можно оформить в подарок, но только при условии полной оплаты на сайте</p>
+			<h3>Что дарим</h3>
+			<div>
+				<p>Тип посылки</p>
+				<ul>
+					<li><input type="radio" name="type" value="2" data-price="5000" checked> Авоська</li>
+					<li><input type="radio" name="type" value="1" data-price="2500"> Ящик</li>
+				</ul>
+			</div>
+			<div>
+				<p>Тематика первой посылки</p>
+				<select>
+					<option>Ассорти</option>
+					<option>Другое</option>
+				</select>
+			</div>
+			<div>
+				<h6><input type="checkbox" checked> менять тематику каждый месяц</h6>
+			</div>
+			<div>
+				<p>Срок подписки</p>
+				<ul>
+					<li><input type="radio" name="duration" data-duration="0" checked> Тест-драйв</li>
+					<li><input type="radio" name="duration" data-duration="3"> 3 месяца</li>
+					<li><input type="radio" name="duration" data-duration="6"> 6 месяцев</li>
+				</ul>
+			</div>
+			<h3>Кому дарим</h3>
+			<div>
+				<p>Имя получателя</p>
+				<input type="text" placeholder="Например, Иванов Иван" required>
+			</div>
+			<div>
+				<p>Телефон получателя</p>
+				<input type="text" class="num1" placeholder="+7" required>
+				<input type="text" class="num2" placeholder="499" required>
+				<input type="text" class="num3" placeholder="999-99-99" required>
+			</div>
+			<div>
+				<h6><input type="checkbox" checked> приложить открытку</h6>
+			</div>
+			<div>
+				<p>Текст открытки</p>
+				<textarea cols="60" rows="5" required></textarea>
+			</div>
+			<h3>Куда доставим</h3>
+			<div>
+				<p>Улица</p>
+				<input type="text" placeholder="Например, Московская улица" required>
+			</div>
+			<div>
+				<p>Дом</p>
+				<input type="text" class="num4" placeholder="" required>
+				<p>Корпус</p>
+				<input type="text" class="num4" placeholder="" required>
+				<p>Квартира</p>
+				<input type="text" class="num4" placeholder="" required>
+			</div>
+			<div>
+				<p>Текст открытки</p>
+				<textarea cols="60" rows="2"></textarea>
+			</div>
+			<h3>Кто отправил</h3>
+			<div>
+				<p>Ваш e-mail</p>
+				<input type="text" placeholder="Например, box@locallocal.ru" required>
+			</div>
+			<div>
+				<p>Телефон получателя</p>
+				<input type="text" class="num1" placeholder="+7">
+				<input type="text" class="num2" placeholder="499">
+				<input type="text" class="num3" placeholder="999-99-99">
+			</div>
+			<button class="disabled"><span>Подарить</span></button>
+			<h6 class="tip">Вы будете перенаправлены на страницу оплаты</h6>
+		</div>
+		<div class="total">
+			<h6>Сумма заказа</h6>
+			<p><span class="price">5 000</span> x <span class="duration">0</span></p>
+			<h5>= <span>0</span></h5>
+			<p>рублей</p>
+		</div>
+		<div class="clear"></div>
+	</div>
+	<div class="footer">
+		<div class="address">
+			<p>г. Москва, ул. Нижегородская 33</p>
+			<p>(БЦ «Нижегородский»)</p>
+			<p><a href="#">Показать на карте</a></p>
+		</div>
+		<div class="contacts">
+			<p>+7 (499) 653-74-89</p>
+			<p><a href="#">info@hellohoney.ru</a></p>
+			<p><a href="#">Реквизиты компании</a></p>
+		</div>
+		<h6>© 2015. Hello, honey - подписка на мед</h6>
+		<div class="social">
+			<p>Мы в социальных сетях</p>
+			<ul>
+				<li><a href="#" class="instagram"></a></li>
+				<li><a href="#" class="vkontakte"></a></li>
+				<li><a href="#" class="facebook"></a></li>
+			</ul>
+		</div>
+		<div class="payment">
+			<p>Мы принимаем к оплате</p>
+			<img src="./img/payment_icons.png" width="163" height="22" alt="">
+		</div>
+		<h4>Разработка сайта — <a href="#"><img src="./img/author_logo.png" width="115" height="20" alt=""></a></h4>
+		<h5><span>Другие проекты «Hello, honey»</span></h5>
+		<ul class="nav">
+			<li><a href="#">Корпоративные подарки</a></li>
+			<li><a href="#">Свадебные комплименты</a></li>
+			<li><a href="#">Подарочные наборы</a></li>
+			<li><a href="#">Интернет-магазин сладостей</a></li>
+		</ul>
+	</div>
+	<script type="text/javascript" src="./js/jquery.js"></script>
+	<script type="text/javascript" src="./js/slides.js"></script>
+	<script type="text/javascript" src="./js/uniform.js"></script>
+	<script type="text/javascript" src="./js/dynamic.js"></script>
+</body>
+</html>
